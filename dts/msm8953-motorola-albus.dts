@@ -1,0 +1,21 @@
+/dts-v1/;
+
+/include/ "msm8953.dtsi"
+/include/ "motorola-carrier-channel-ids.dtsi"
+
+/ {
+	// This is used by the bootloader to find the correct DTB 
+	qcom,msm-id = <0x125 0x00>;
+	qcom,board-id = <0x48 0x8000>,
+			<0x48 0x81A0>,
+			<0x48 0x81A1>,
+			<0x49 0x81B0>,
+			<0x49 0x8200>,
+			<0x4A 0x8300>,
+			<0x4A 0x8400>;
+
+	model = "Motorola Moto Z2 Play (albus)";
+	compatible = "motorola,albus", "qcom,msm8953", "lk2nd,device";
+	lk2nd,motorola-unitinfo = <1>;
+	lk2nd,pstore = <0xef000000 0x80000>;
+};
